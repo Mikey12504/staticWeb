@@ -1,0 +1,425 @@
+ <!-- RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023A
+Assessment: Assignment 1
+Author: Nguyen Ba Duc Manh
+ID: s3978506
+Acknowledgement: 
+
+Card slider idea:
+https://www.youtube.com/watch?v=LBAThoUn3rU&t=592s
+Flying title idea:
+https://www.youtube.com/watch?v=8saYt5fc2Pc
+Animation hamburger bar:
+https://www.youtube.com/watch?v=TD-MFXs2M5E&t=5s
+
+video slider:
+https://www.youtube.com/watch?v=ThaIBFd387A
+Navigation color changing:
+https://www.youtube.com/watch?v=ZdlBXeNe7bg&t=537s
+Opening card:
+https://www.youtube.com/watch?v=VKcbZGW1woc
+
+
+Video download:https://www.pexels.com
+
+Images download:https://www.amazon.com/b?node=283155
+
+Icon:https://fontawesome.com
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duc Manh's site</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="image/iconweb.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/5c0d7c8bb2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- ----------------- Navigation----------------- -->
+    <header class="header"> 
+        <a href="index.html" target="_self" class="logo"><i>Optimism</i></a>
+        <nav class="navbar">
+            <input type="checkbox" id="check">  
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="#section1">About</a>
+                </li>
+                <li>
+                    <a href="selfhelp.html">Self Help</a>
+                </li>
+                <li>
+                    <a href="fiction.html">Fiction</a>
+                </li>
+                <li>
+                    <a href="contactus.html">Contact us</a>
+                </li>
+            </ul>   
+                 
+        </nav>
+        <input type="checkbox" id="check">
+        
+        <label class="btnbar" for="check">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        
+    </header>
+    <!-- ----------------- Video slider----------------- -->
+    <section id="up">
+        <video class="video-slide active" src="video/1video.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="video/2video.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="video/3video.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="video/4video.mp4" autoplay muted loop></video>
+       
+        <div class="welcome">
+            <h1>Leading the World by <span>Reading</span></h1>
+            <p>Welcome to Optimism Bookstore - Your Gateway to Inspiration and Positivity! Embrace the Power of Optimism in Every Page You Explore</p>
+        </div>
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+    <main>
+    <!-- ----------------- First category----------------- -->
+        <div class="cate1">
+
+            <div class="cate1-title reveal">
+                <a href="selfhelp.html">
+                    <span>
+                    <h1>SELF HELP</h1>
+                </span>
+                </a>
+            </div>
+            <div class="container reveal">
+
+                <input type="radio" name="slider" class="d-none" id="s1" checked>
+                <input type="radio" name="slider" class="d-none" id="s2">
+                <input type="radio" name="slider" class="d-none" id="s3">
+                <input type="radio" name="slider" class="d-none" id="s4">
+                <input type="radio" name="slider" class="d-none" id="s5">
+                
+                <div class="cards">
+
+                    <label for="s1" id="slide1">
+                        <div class="card">
+                          <div class="image">
+                            <img src="image/law_of_power.jpg" alt="preview">
+                            
+                          </div>
+                          <div class="infos">
+                            <span class="name">48 Laws of Power</span>
+                            <span class="des">Lorem ipsum dolor sit amet, sit amet  adipiscing elit. Aenean vel ansd . Nullam
+                              lorem. Nulla eu
+                              sodales</span>
+                          </div>
+                          <a href="bookdetail1.html" class="btn-contact">Details</a>
+                          
+                        </div>
+                      </label>
+
+
+                      <label for="s2" id="slide2">
+                        <div class="card">
+                          <div class="image">
+                            <img src="image/ego_is_enemies.png" alt="preview">
+                            
+                          </div>
+                          <div class="infos">
+                            <span class="name">Ego is The Enemies</span>
+                            <span class="des">Lorem ipsum dolor sit, adipiscing elit. Aenean vel sit ansd . Nullam
+                              lorem. Nulla eu
+                              sodales karma stellus</span>
+                          </div>
+                          <a href="bookdetail2.html" class="btn-contact">Details</a>
+                          
+                        </div>
+                      </label>
+
+
+                      
+                      <label for="s3" id="slide3">
+                        <div class="card">
+                          <div class="image">
+                            <img src="image/meditations.jpg" alt="preview">
+                            
+                          </div>
+                          <div class="infos">
+                            <span class="name">Meditations: Meditations by Marcus Aurelius</span>
+                            <span class="des">Lorem ipsum dolor sit, adipiscing elit. Aenean vel sit ansd . Nullam
+                              lorem. Nulla eu
+                              sodales karma stellus</span>
+                          </div>
+                          <a href="bookdetail3.html" class="btn-contact">Details</a>
+                          
+                        </div>
+                      </label>
+
+
+                    <label for="s4" id="slide4">
+                        <div class="card">
+                        <div class="image">
+                            <img src="image/thinkandgrow.webp" alt="preview">
+                            
+                        </div>
+                        <div class="infos">
+                            <span class="name">Think and Grow Rich</span>
+                            <span class="des">Lorem ipsum dolor sit, adipiscing elit. Aenean vel sit ansd . Nullam
+                            lorem. Nulla eu
+                            sodales karma stellus</span>
+                        </div>
+                        <a href="bookdetail4.html" class="btn-contact">Details</a>
+                        
+                        </div>
+                    </label>
+
+                    <label for="s5" id="slide5">
+                        <div class="card">
+                        <div class="image">
+                            <img src="image/themagic.jpg" alt="preview">
+                           
+                        </div>
+                        <div class="infos">
+                            <span class="name">The Magic of Thinking Big</span>
+                            <span class="des">Lorem ipsum dolor sit, adipiscing elit. Aenean vel sit ansd . Nullam
+                            lorem. Nulla eud
+                            sodales karma stellus</span>
+                        </div>
+                        <a href="bookdetail5.html" class="btn-contact">Details</a>
+                        
+                        </div>
+                    </label>
+
+                </div>
+            </div>
+
+            <div class="explore-box reveal">
+                <a href="selfhelp.html"><div class="explore">
+                    <span>Explore more</span>
+                </div></a>
+            </div>
+        </div>
+
+    <!-- ----------------- Second category----------------- -->
+        <div class="cate2">
+            <div class="cate2-title">
+                <a href="fiction.html"><h1>FICTION</h1></a>
+                
+            </div>
+            <div class="wrapper-box">
+                <div class="wrapper">
+                    
+                    <div class="item"> 
+                        <div class="circle"></div>
+                        <div class="content">
+                                <h3>The Great Gatsby</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat blanditiis, cupiditate nobis optio quae laborum vero ea eos neque quis tempora, mollitia sed aspernatur similique libero quibusdam esse sit aut!</p>
+                                <a href="bookdetail9.html">Detail</a>
+                        </div>
+                        <img src="image/gatsby.webp" alt="preview">        
+                    </div>
+                    <div class="item">
+                        <div class="circle second"></div>
+                        <div class="content">
+                            <h3>to Kill a Mockingbird</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, porro assumenda! Incidunt necessitatibus provident deleniti perferendis commodi quo ea modi laudantium ducimus! Deleniti, nesciunt veritatis a reiciendis dolorum commodi unde.</p>
+                            <a href="bookdetail7.html">Detail</a>
+                        </div>
+                        <img src="image/mocking.webp" alt="preview">
+                    </div>
+                    <div class="item">
+                        <div class="circle third"></div>
+                        <div class="content">
+                            <h3 style="font-size: 1.5em;">The girl with the Dragon tattoo</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ullam dolore facilis accusantium id, quaerat qui consectetur modi quas ipsa nihil est repellendus. Sint asperiores corporis perspiciatis aliquid enim voluptatibus!</p>
+                            <a href="bookdetail11.html">Detail</a>
+                        </div>
+                        <img src="image/tatoo.jpg" alt="preview">
+                    </div>
+                    <div class="item">
+                        <div class="circle"></div>
+                        <div class="content">
+                            <h3 style="font-size: 1.5em;">1984</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, error pariatur. Maxime fugiat impedit excepturi tenetur iure, pariatur amet saepe eum unde dolore? Vel animi error alias non est blanditiis!</p>
+                            <a href="bookdetail8.html">Detail</a>
+                        </div>
+                        <img src="image/1984.webp" alt="preview">
+                    </div>
+                    <div class="item">
+                        <div class="circle fifth"></div>
+                        <div class="content">
+                            <h3>Pride and Prejudice</h3>
+                            <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero velit quaerat suscipit, est excepturi totam nesciunt ex odio tempore quo maiores aspernatur cupiditate provident sed commodi aperiam? Aspernatur, nemo eos.</p>
+                            <a href="bookdetail12.html">Detail</a>
+                        </div>
+                        <img src="image/prideandprejudice.jpg" alt="preview">
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+
+    <!-- ----------------- Footer----------------- -->
+    <a href="#up">
+        <div class="up-btn">
+        <h3>Go Up</h3>
+    </div>
+    </a>
+    
+    <footer id="section1">
+        <div class="general-info">
+            <a href="index.html" target="_self" class="sublogo"><i>Optimism</i></a>
+            <div><p>
+                Explore a world of knowledge at our book store, where stories come alive and imaginations thrive.
+            </p></div>
+            <div class="social-media">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com/i/flow/login?redirect_after_login=%2F%3Flang%3Den"><i class="fa-brands fa-xing"></i></a>
+                <a href="https://github.com/Mikey12504/staticWeb"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+
+        <div class="contact">
+            <h3>Get to know us</h3>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Copyright</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="contact">
+            <h3>Service</h3>
+            <ul>
+                <li><a href="#">Sell book</a></li>
+                <li><a href="#">Purchase book</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Book Review</a></li>
+                
+            </ul>
+        </div>
+        <div class="mail">
+            <i class="fa-solid fa-paper-plane"></i>
+            <input type="email" name="main" placeholder="mail">
+        </div>
+    </footer>
+    
+    <script type="text/javascript">
+        let menutoggle = document.querySelector('.btnbar')
+        menutoggle.onclick = function(){
+            menutoggle.classList.toggle('active')
+        }
+        
+        //java for slider
+        const btns =document.querySelectorAll(".nav-btn");
+        const sliders =document.querySelectorAll(".video-slide");
+        var sliderNav = function(manual){
+            btns.forEach((btn)=>{
+                btn.classList.remove("active");
+            })
+            sliders.forEach((slider)=>{
+                slider.classList.remove("active");
+            })
+            btns[manual].classList.add("active");
+            sliders[manual].classList.add("active");
+        }
+        btns.forEach((btn,i)=>{
+            btn.addEventListener("click",()=>{
+                sliderNav(i);
+            })
+        });
+
+
+    
+        // Scroll
+        window.addEventListener('scroll',reveal);
+        function reveal(){
+            var reveals = document.querySelectorAll('.reveal');
+
+            for(var i = 0; i< reveals.length; i++){
+
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 150;
+
+                if(revealtop < windowheight - revealpoint){
+                    reveals[i].classList.add('active');
+                }
+                else{
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+        
+
+        //  change coler of navigation
+        function changeColor(){
+            var logo = document.querySelector(".logo");
+            var navbar = document.querySelector(".navbar");
+            var btnbar = document.querySelector('.btnbar');
+            var scrollValue = window.scrollY;
+            var screenwidth = window.innerWidth;
+            console.log(screenwidth);
+            if(scrollValue<1900 && screenwidth>992){
+                logo.classList.remove('scrolled');
+                navbar.classList.remove('scrolled');
+                btnbar.classList.remove('scrolled');
+            }else if(scrollValue<1350 && screenwidth<992) {
+                logo.classList.remove('scrolled');
+                navbar.classList.remove('scrolled');
+                btnbar.classList.remove('scrolled');
+            } 
+            else{
+                logo.classList.add('scrolled');
+                navbar.classList.add('scrolled');
+                btnbar.classList.add('scrolled');
+            }
+        };
+        window.addEventListener('scroll',changeColor);
+
+
+        // text animation
+        let list = document.querySelector('.cate2-title h1');
+       
+            let letters = list.textContent.split("");
+            list.textContent = "";
+            letters.forEach((letter, i)=>{
+                i += 1;
+                let span = document.createElement('span');
+                let delay = i/15;
+
+                let letterOut = document.createElement("span");
+                letterOut.textContent = letter;
+                letterOut.style.transitionDelay = `${delay}s`;
+                letterOut.classList.add('out');
+                span.append(letterOut);
+
+                let letterIn = document.createElement("span");
+                letterIn.textContent = letter;
+                letterIn.style.transitionDelay = `${delay}s`;
+                letterIn.classList.add('in');
+                span.append(letterIn);
+                
+                list.append(span);
+            })
+     
+
+    </script>
+    
+</body>
+</html>
