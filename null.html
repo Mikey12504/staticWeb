@@ -6,15 +6,8 @@ Author: Nguyen Ba Duc Manh
 ID: s3978506
 Acknowledgement: 
 
-Animation hamburger bar:
-https://www.youtube.com/watch?v=TD-MFXs2M5E&t=5s
-Opening card:
-https://www.youtube.com/watch?v=PIYH1r22DKE&t=22s
-
-Images download:https://www.amazon.com/b?node=283155
 Icon: https://fontawesome.com
  -->
-
 
  <!DOCTYPE html>
  <html lang="en">
@@ -23,7 +16,7 @@ Icon: https://fontawesome.com
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Optimism</title>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-     <link rel="stylesheet" href="css/subcate.css">
+     <link rel="stylesheet" href="css/null.css">
      <link rel="icon" href="image/iconweb.png" type="image/x-icon">
      <script src="https://kit.fontawesome.com/5c0d7c8bb2.js" crossorigin="anonymous"></script>
  </head>
@@ -62,66 +55,14 @@ Icon: https://fontawesome.com
      </header>
         
      <main>
- 
-     <!-- ----------------- First category----------------- -->
          <section id="up">
-             <h1 style="font-size: 4.5em;">Literary FICTION</h1>
-             <div class="sub-cate">
-                 
-                 <div style="overflow-x:scroll;"> 
-                     <div class="sub-cate-box reveal">
-                     <div class="card">
-                     <div class="imgBx">
-                         <img src="image/mocking.webp" width="270px" alt="preview">
-                     </div>
-                     <div class="details" style="--clr:#1A120B;">
-                         <h3>to Kill a MockingBird<br></h3>
-                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dicta quaerat quos! Magni quisquam quaerat officiis nisi. Voluptas error veniam natus, iusto dicta, cum reiciendis voluptate veritatis est iure vel?</p>
-                         <div class="group">
-                             <h2><sup>$</sup>8<small>.89</small></h2>
-                             <a href="bookdetail7.html">Details</a>
-                         </div>
-                     </div>
-                 </div>
- 
-                 <div class="card">
-                     <div class="imgBx">
-                         <img src="image/1984.webp" width="270px" alt="preview">
-                     </div>
-                     <div class="details" style="--clr:#e14747;">
-                         <h3>1984<br></h3>
-                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dicta quaerat quos! Magni quisquam quaerat officiis nisi. Voluptas error veniam natus, iusto dicta, cum reiciendis voluptate veritatis est iure vel?</p>
-                         <div class="group">
-                             <h2><sup>$</sup>7<small>.48</small></h2>
-                             <a href="bookdetail8.html">Details</a>
-                         </div>
-                     </div>
-                 </div>
- 
-                 <div class="card">
-                     <div class="imgBx">
-                         <img src="image/gatsby.webp" width="270px" alt="preview">
-                     </div>
-                     <div class="details">
-                         <h3>The Great Gatsby<br></h3>
-                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dicta quaerat quos! Magni quisquam quaerat officiis nisi. Voluptas error veniam natus, iusto dicta, cum reiciendis voluptate veritatis est iure vel?</p>
-                         <div class="group">
-                             <h2><sup>$</sup>18<small>.39</small></h2>
-                             <a href="bookdetail9.html">Details</a>
-                         </div>
-                     </div>
-                 </div>
-                 </div>
-             </div>
- 
- 
-                 
-             </div>
- 
+        <i class="fa-solid fa-triangle-exclamation"></i>
+         <h2>Page under maintenance</h2>
+         
          </section>
      </main>
-     
- <!-- ----------------- Footer ----------------- -->
+ 
+ 
      <a href="#up">
          <div class="up-btn">
          <h3>Go Up</h3>
@@ -166,31 +107,37 @@ Icon: https://fontawesome.com
              <input type="email" name="main" placeholder="mail">
          </div>
      </footer>
-     
      <script>
          let menutoggle = document.querySelector('.btnbar')
          menutoggle.onclick = function(){
              menutoggle.classList.toggle('active')
          }
-          // Scroll
-          window.addEventListener('scroll',reveal);
-         function reveal(){
-             var reveals = document.querySelectorAll('.reveal');
+         
+         // change color scroll
  
-             for(var i = 0; i< reveals.length; i++){
- 
-                 var windowheight = window.innerHeight;
-                 var revealtop = reveals[i].getBoundingClientRect().top;
-                 var revealpoint = 150;
- 
-                 if(revealtop < windowheight - revealpoint){
-                     reveals[i].classList.add('active');
-                 }
-                 else{
-                     reveals[i].classList.remove('active');
-                 }
+         function changeColor(){
+             var logo = document.querySelector(".logo");
+             var navbar = document.querySelector(".navbar");
+             var btnbar = document.querySelector('.btnbar');
+             var scrollValue = window.scrollY;
+             var screenwidth = window.innerWidth;
+             console.log(screenwidth);
+             if(scrollValue<1900 && screenwidth>992){
+                 logo.classList.remove('scrolled');
+                 navbar.classList.remove('scrolled');
+                 btnbar.classList.remove('scrolled');
+             }else if(scrollValue<1350 && screenwidth<992) {
+                 logo.classList.remove('scrolled');
+                 navbar.classList.remove('scrolled');
+                 btnbar.classList.remove('scrolled');
+             } 
+             else{
+                 logo.classList.add('scrolled');
+                 navbar.classList.add('scrolled');
+                 btnbar.classList.add('scrolled');
              }
-         }
+         };
+         window.addEventListener('scroll',changeColor);
  
          
      </script>

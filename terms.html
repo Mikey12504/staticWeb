@@ -1,0 +1,158 @@
+ <!-- RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023A
+Assessment: Assignment 1
+Author: Nguyen Ba Duc Manh
+ID: s3978506
+Acknowledgement: 
+
+Icon: https://fontawesome.com
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Optimism</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="css/null.css">
+     <link rel="icon" href="image/iconweb.png" type="image/x-icon">
+     <script src="https://kit.fontawesome.com/5c0d7c8bb2.js" crossorigin="anonymous"></script>
+ </head>
+ <body>
+     <header class="header"> 
+         <a href="index.html" target="_self" class="logo"><i>Optimism</i></a>
+         <nav class="navbar">
+             <input type="checkbox" id="check">  
+             <ul>
+                 <li>
+                     <a href="index.html">Home</a>
+                 </li>
+                 <li>
+                     <a href="#section1">About</a>
+                 </li>
+                 <li>
+                     <a href="selfhelp.html">Self Help</a>
+                 </li>
+                 <li>
+                     <a href="fiction.html">Fiction</a>
+                 </li>
+                 <li>
+                     <a href="contactus.html">Contact us</a>
+                 </li>
+             </ul>   
+                  
+         </nav>
+         <input type="checkbox" id="check">
+         
+         <label class="btnbar" for="check">
+             <span></span>
+             <span></span>
+             <span></span>
+         </label>
+         
+     </header>
+        
+     <main>
+        <section id="up" style="margin: 100px; height: auto;">
+        
+        <div class="box">
+            <h2 id="pp">Privacy Policy</h2>
+            <p>At OPTIMISM, we prioritize the privacy and security of our customers' personal information. Our Privacy Policy outlines how we collect, use, and protect your data when you interact with our website or services. We are committed to transparently explaining our data practices, including the types of information we gather, how we use it, and your rights regarding your personal data. Rest assured that we adhere to industry best practices and stringent security measures to safeguard your information and provide you with a safe and enjoyable online shopping experience.</p>
+        </div>
+        
+        <div class="box">
+            <h2 id="t">Terms</h2>
+            <p>Our Terms outline the conditions and agreements that govern your use of OPTIMISM's website and services. By accessing and using our platform, you agree to abide by these terms, which cover a range of topics including acceptable use, user conduct, intellectual property rights, and more. We aim to create a fair and respectful environment for all users, and our Terms provide the framework for how we expect our customers to engage with our offerings. Clear and concise, these terms help ensure a positive experience for everyone involved.</p>
+        </div>
+        <div class="box">
+             <h2 id="cr">Copyright</h2>
+            <p>At OPTIMISM, we respect intellectual property rights and value the creativity of authors and creators. Our Copyright statement underscores our commitment to protecting copyrighted material and outlines the ways in which we handle copyrighted content on our platform. We provide a platform for authors to showcase and sell their works, while also upholding the rights of copyright holders. This ensures that our customers can enjoy a wide variety of literary and artistic creations, while authors receive due recognition and compensation for their efforts.</p>
+        </div>
+        
+       
+        </section>
+     </main>
+ 
+ 
+     <a href="#up">
+         <div class="up-btn">
+         <h3>Go Up</h3>
+     </div>
+     </a>
+ 
+     <footer id="section1">
+         <div class="general-info">
+             <a href="index.html" target="_self" class="sublogo"><i>Optimism</i></a>
+             <div><p>
+                 Explore a world of knowledge at our book store, where stories come alive and imaginations thrive.
+             </p></div>
+             <div class="social-media">
+                 <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                 <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                 <a href="https://twitter.com/i/flow/login?redirect_after_login=%2F%3Flang%3Den"><i class="fa-brands fa-xing"></i></a>
+                 <a href="https://github.com/Mikey12504/staticWeb"><i class="fa-brands fa-github"></i></a>
+             </div>
+         </div>
+ 
+         <div class="contact">
+             <h3>Get to know us</h3>
+             <ul>
+                 <li><a href="#pp">Privacy Policy</a></li>
+                 <li><a href="#t">Terms</a></li>
+                 <li><a href="#cr">Copyright</a></li>
+                 <li><a href="contactus.html">Contact Us</a></li>
+             </ul>
+         </div>
+         <div class="contact">
+             <h3>Service</h3>
+             <ul>
+                 <li><a href="null.html">Sell book</a></li>
+                 <li><a href="null.html">Purchase book</a></li>
+                 <li><a href="null.html">Blog</a></li>
+                 <li><a href="null.html">Book Review</a></li>
+                 
+             </ul>
+         </div>
+         <div class="mail">
+             <i class="fa-solid fa-paper-plane"></i>
+             <input type="email" name="main" placeholder="mail">
+         </div>
+     </footer>
+     <script>
+         let menutoggle = document.querySelector('.btnbar')
+         menutoggle.onclick = function(){
+             menutoggle.classList.toggle('active')
+         }
+         
+         // change color scroll
+ 
+         function changeColor(){
+             var logo = document.querySelector(".logo");
+             var navbar = document.querySelector(".navbar");
+             var btnbar = document.querySelector('.btnbar');
+             var scrollValue = window.scrollY;
+             var screenwidth = window.innerWidth;
+             console.log(screenwidth);
+             if(scrollValue<1900 && screenwidth>992){
+                 logo.classList.remove('scrolled');
+                 navbar.classList.remove('scrolled');
+                 btnbar.classList.remove('scrolled');
+             }else if(scrollValue<1350 && screenwidth<992) {
+                 logo.classList.remove('scrolled');
+                 navbar.classList.remove('scrolled');
+                 btnbar.classList.remove('scrolled');
+             } 
+             else{
+                 logo.classList.add('scrolled');
+                 navbar.classList.add('scrolled');
+                 btnbar.classList.add('scrolled');
+             }
+         };
+         window.addEventListener('scroll',changeColor);
+ 
+         
+     </script>
+ </body>
+ </html>
